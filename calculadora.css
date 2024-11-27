@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+.fundo{
+    height: 100vh;
+    background-color: #F2D16D;
+}
+
+.goldcalc{
+    display: flex;
+    width: 100vh;
+    padding-left: 45px;
+    padding-top: 30px;
+    cursor: pointer;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.gold{
+    color: #F2BB13;
+}
+
+.calc{
+    color: #fff;
+}
+
+h1{
+    
+}
+
+.calculadora{
+    position: absolute;
+    background-color: #442F73;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+button{
+    background-color: #6D6767;
+    border: none;
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+button:hover{
+    background-color: #0000008c;
+}
+
+.ac{
+    background-color: #ff0000be;
+}
+
+.igual{
+    height: 162px;
+}
+
+.zero{
+    width: 162px;
+}
+
+#resultado{
+    background-color: #fff;
+    width: 345px;
+    height: 60px;
+    margin: 13px;
+    border-radius: 10px;
+    font-size: 25px;
+    text-align: right;
+    padding: 5px;
+    padding-top: 20px;
+}
+
+.historico{
+    position: absolute;
+    top: 83%;
+    left: 90%;
+    background-color: #442F73;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.historico:hover{
+    transform: scale(1.05);
+}

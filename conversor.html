@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoldCalc - Conversor</title>
+    <title>Conversor de Moedas</title>
     <link rel="stylesheet" href="conversor.css">
 </head>
 <body>
@@ -11,47 +11,13 @@
         <h1>Conversor de Moedas</h1>
         <div class="converter">
             <input type="number" id="amount" placeholder="Digite o valor" />
-            <select id="fromCurrency">
-                <option value="USD">USD</option>
-                <option value="BRL">BRL</option>
-            </select>
+            <select id="fromCurrency"></select>
             <span>para</span>
-            <select id="toCurrency">
-                <option value="BRL">BRL</option>
-                <option value="USD">USD</option>
-            </select>
+            <select id="toCurrency"></select>
             <button onclick="convert()">Converter</button>
         </div>
         <p id="result"></p>
     </div>
-    <script>
-        function convert() {
-            const amount = parseFloat(document.getElementById('amount').value);
-            const fromCurrency = document.getElementById('fromCurrency').value;
-            const toCurrency = document.getElementById('toCurrency').value;
-
-    if (isNaN(amount) || amount <= 0) {
-        document.getElementById('result').textContent = "Por favor, insira um valor válido.";
-        return;
-    }
-
-    const exchangeRates = {
-        "USD_BRL": 5.81,  
-        "BRL_USD": 0.17  
-    };
-
-    const key = `${fromCurrency}_${toCurrency}`;
-    const rate = exchangeRates[key];
-
-    if (rate) {
-        const convertedAmount = (amount * rate).toFixed(2);
-        document.getElementById('result').textContent = 
-            `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
-    } else {
-        document.getElementById('result').textContent = "Conversão não suportada.";
-    }
-}
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

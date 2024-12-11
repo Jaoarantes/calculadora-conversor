@@ -1,8 +1,6 @@
-// Substitua pela sua chave de API
 const API_KEY = "SUA_CHAVE_DE_API";
 const API_URL = "https://open.er-api.com/v6/latest";
 
-// Função para carregar as moedas
 async function loadCurrencies() {
     try {
         const response = await fetch(`${API_URL}/USD?apikey=${API_KEY}`);
@@ -25,8 +23,6 @@ async function loadCurrencies() {
             fromCurrency.appendChild(option1);
             toCurrency.appendChild(option2);
         });
-
-        // Define USD e EUR como padrão
         fromCurrency.value = "USD";
         toCurrency.value = "EUR";
     } catch (error) {
@@ -34,8 +30,6 @@ async function loadCurrencies() {
         document.getElementById('result').textContent = "Erro ao carregar moedas.";
     }
 }
-
-// Função para converter moedas
 async function convert() {
     const amount = parseFloat(document.getElementById('amount').value);
     const fromCurrency = document.getElementById('fromCurrency').value;
@@ -64,6 +58,4 @@ async function convert() {
         document.getElementById('result').textContent = "Erro ao realizar a conversão.";
     }
 }
-
-// Inicializa o carregamento das moedas ao carregar a página
 document.addEventListener('DOMContentLoaded', loadCurrencies);

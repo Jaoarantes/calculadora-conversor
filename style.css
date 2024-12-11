@@ -3,7 +3,7 @@
 body {
     margin: 0;
     display: flex;
-    height: 100vh; /* Ocupa 100% da altura da janela */
+    height: 100vh;
 }
 
 .left {
